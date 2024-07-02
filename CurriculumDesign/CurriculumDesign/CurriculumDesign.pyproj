@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>e3a7788f-4fcb-49d8-8b25-f01c4bf7b3e4</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>app\spiders\ip_worldcloud.py</StartupFile>
+    <StartupFile>run.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,18 +21,25 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="app\app.py" />
+    <Compile Include="app\routes.py" />
+    <Compile Include="run.py" />
     <Compile Include="app\spiders\all_inf.py" />
     <Compile Include="app\spiders\get_nl_csv.py" />
     <Compile Include="app\spiders\ip_worldcloud.py" />
     <Compile Include="app\spiders\spd_ip.py" />
     <Compile Include="app\spiders\tname.py" />
     <Compile Include="app\spiders\tn_worldcloud.py" />
+    <Compile Include="app\__init__.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\" />
     <Folder Include="app\templates\" />
     <Folder Include="app\spiders\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\templates\echarts.html" />
+    <Content Include="app\templates\index.html" />
+    <Content Include="app\templates\test.html" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

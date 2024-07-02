@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B站热门视频排行榜</title>
+    <!-- 引入 ECharts 库 -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.3.2/echarts.min.js"></script>
+    <style>
+        /* 自定义样式 */
+        #container {
+            width: 100%;
+            height: 600px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="container"></div>
+
+    <script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+        renderer: 'canvas',
+        useDirtyRect: false
+    });
+
+    var option;
+
+    option = {
+        title: {
+            text: 'B站热门视频排行榜视频信息'
+        },
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'cross',
+                label: {
+                    backgroundColor: '#6a7985'
+                }
+            }
+        },
+        legend: {
+            data: ['点赞量', '播放量', '转发数', '投币数', '评论数']
+        },
+        toolbox: {
+            feature: {
+                saveAsImage: {}
+            }
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        dataZoom: [
+            {
+                type: 'slider',
+                show: true,
+                start: 94,
+                end: 100,
+                handleSize: 8
+            },
+            {
+                type: 'inside',
+                start: 94,
+                end: 100
+            },
+            {
+                type: 'slider',
+                show: true,
+                yAxisIndex: 0,
+                filterMode: 'empty',
+                width: 12,
+                height: '70%',
+                handleSize: 8,
+                showDataShadow: false,
+                left: '93%'
+            }
+        ],
+        xAxis: [
+            {
+                type: 'category',
+                boundaryGap: false,
+                axisLabel: {
+                    interval: 0,
+                    rotate: 60
+                },
+                // 确保此处的数据是动态获取并替换这里的占位符
+                data: [] // {{ title|tojson }}
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value'
+            }
+        ],
+        series: [
+            {
+                name: '点赞量',
+                type: 'line',
+                stack: 'Total',
+                areaStyle: {},
+                emphasis: {
+                    focus: 'series'
+                },
+                // 同样需要替换为真实数据
+                data: [] // {{ like|tojson }}
+            },
+            // 其他系列数据...
+        ]
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    if (option && typeof option === 'object') {
+        myChart.setOption(option);
+    }
+
+    // 让图表自适应窗口变化
+    window.addEventListener('resize', myChart.resize);
+    </script>
+
+</body>
+</html>

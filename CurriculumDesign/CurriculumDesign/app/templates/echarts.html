@@ -1,0 +1,97 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B站热门视频排行榜</title>-->
+    <!-- 引入 ECharts -->
+    <!--<script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.3.2/echarts.min.js"></script>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #container {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+
+    <script type="text/javascript">
+        var dom = document.getElementById('container');
+        var myChart = echarts.init(dom, null, {
+          renderer: 'canvas',
+          useDirtyRect: false
+        });
+        var app = {};
+
+        var option = {
+          title: {
+            text: 'B站热门视频排行榜视频信息'
+          },
+          tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+              type: 'cross',
+              label: {
+                backgroundColor: '#6a7985'
+              }
+            }
+          },
+          legend: {
+            data: ['点赞量', '播放量', '转发数', '投币数', '评论数']
+          },
+          toolbox: {
+            feature: {
+              saveAsImage: {}
+            }
+          },
+          grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+          },
+          dataZoom: [
+            // ... (保持原dataZoom配置)
+          ],
+          xAxis: [
+            {
+              type: 'category',
+              boundaryGap: false,
+              axisLabel: {
+                  interval:0,
+                  rotate:60 // 修正拼写错误: rotat -> rotate
+              },
+              data: {{ title|tojson }}
+            }
+          ],
+          yAxis: [
+            {
+              type: 'value'
+            }
+          ],
+          series: [
+            // 系列数据配置，使用tojson过滤器传递Python变量
+            { name: '点赞量', data: {{ like|tojson }} },
+            { name: '播放量', data: {{ view|tojson }} },
+            { name: '转发数', data: {{ forward|tojson }} }, // 假定'show'应为'forward'，根据实际情况调整
+            { name: '投币数', data: {{ coin|tojson }} },
+            { name: '评论数', data: {{ comment|tojson }} }
+          ]
+        };
+
+        if (option && typeof option === 'object') {
+          myChart.setOption(option);
+        }
+
+        window.addEventListener('resize', myChart.resize);
+    </script>
+</body>
+</html>-->
