@@ -3,7 +3,7 @@
 #
 
 # 将源代码添加到此项目的可执行文件。
-add_executable (CurriculumDesign "CurriculumDesign.cpp" "CurriculumDesign.h")
+add_executable (CurriculumDesign  "CurriculumDesign.h")
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET CurriculumDesign PROPERTY CXX_STANDARD 20)
