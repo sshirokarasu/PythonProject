@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>e3a7788f-4fcb-49d8-8b25-f01c4bf7b3e4</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>app\spiders\tn_worldcloud.py</StartupFile>
+    <StartupFile>app\spiders\ip_worldcloud.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,8 +22,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app\app.py" />
-    <Compile Include="app\spiders\CurriculumDesign.py" />
+    <Compile Include="app\spiders\all_inf.py" />
     <Compile Include="app\spiders\get_nl_csv.py" />
+    <Compile Include="app\spiders\ip_worldcloud.py" />
+    <Compile Include="app\spiders\spd_ip.py" />
     <Compile Include="app\spiders\tname.py" />
     <Compile Include="app\spiders\tn_worldcloud.py" />
   </ItemGroup>
