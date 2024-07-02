@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>e3a7788f-4fcb-49d8-8b25-f01c4bf7b3e4</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>CurriculumDesign.py</StartupFile>
+    <StartupFile>app\spiders\tn_worldcloud.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,7 +21,16 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="CurriculumDesign.py" />
+    <Compile Include="app\app.py" />
+    <Compile Include="app\spiders\CurriculumDesign.py" />
+    <Compile Include="app\spiders\get_nl_csv.py" />
+    <Compile Include="app\spiders\tname.py" />
+    <Compile Include="app\spiders\tn_worldcloud.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\" />
+    <Folder Include="app\templates\" />
+    <Folder Include="app\spiders\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
