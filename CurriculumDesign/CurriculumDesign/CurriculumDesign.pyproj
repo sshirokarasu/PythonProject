@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>e3a7788f-4fcb-49d8-8b25-f01c4bf7b3e4</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>run.py</StartupFile>
+    <StartupFile>app\spiders\all_inf.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>

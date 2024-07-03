@@ -27,7 +27,7 @@ def parse(text):
         alt_data.append(temp)
 
 def save_data(data):
-    with open('all_data.csv', mode='w', encoding='utf-8-sig', newline='') as fp:
+    with open('all_data_7_3.csv', mode='w', encoding='utf-8-sig', newline='') as fp:
         writer = csv.writer(fp)
         # 更新列标题以包含新增的点赞、转发、投币列
         writer.writerow(['视频名称', 'up主', '播放数量', '评论数', '点赞数', '转发数', '投币数'])
