@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>e3a7788f-4fcb-49d8-8b25-f01c4bf7b3e4</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>app\spiders\all_inf.py</StartupFile>
+    <StartupFile>app\spiders\tname_IP.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,6 +22,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app\routes.py" />
+    <Compile Include="app\spiders\tname_IP.py" />
     <Compile Include="run.py" />
     <Compile Include="app\spiders\all_inf.py" />
     <Compile Include="app\spiders\get_nl_csv.py" />

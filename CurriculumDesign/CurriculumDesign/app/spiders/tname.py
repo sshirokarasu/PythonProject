@@ -20,7 +20,7 @@ def parse(text):
         tname_data.append(item['tname'])
 
 def save_tname():
-    with open('tname.txt', mode='w', encoding='utf-8-sig') as fp:
+    with open('tname_7.3.txt', mode='w', encoding='utf-8-sig') as fp:
         for i in tname_data:
             fp.write(i + '\n')
 

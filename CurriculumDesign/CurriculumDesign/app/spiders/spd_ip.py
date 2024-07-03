@@ -21,7 +21,7 @@ def parse(text):
         location_data.append(item.get('pub_location', 'δ֪'))
 
 def save_location():
-    with open('location.txt', mode='w', encoding='utf-8-sig') as fp:
+    with open('location_7.3.txt', mode='w', encoding='utf-8-sig') as fp:
         for i in location_data:
             fp.write(i + '\n')
 
